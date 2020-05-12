@@ -1,0 +1,54 @@
+{
+  "name": "forwardit",
+  "version": "1.0.0",
+  "description": "Forwarding marker and installer",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "scripts": {
+    "build": "tsc -p .",
+    "clean": "tsc --build --clean",
+    "lint": "eslint --ext .js,.ts ./src",
+    "lint:fix": "eslint --fix --ext .js,.ts ./src",
+    "test": "npm run build && nyc ava",
+    "pack": "npm run build && npm pack",
+    "pack:dry-run": "npm run build && npm pack --dry-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bsdelf/forwardit.git"
+  },
+  "keywords": [
+    "forward",
+    "forwardable"
+  ],
+  "author": "Yanhui Shen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bsdelf/forwardit/issues"
+  },
+  "homepage": "https://github.com/bsdelf/forwardit#readme",
+  "dependencies": {
+    "reflect-metadata": "^0.1.13"
+  },
+  "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
+    "@types/node": "^13.13.5",
+    "@typescript-eslint/eslint-plugin": "2.31.0",
+    "@typescript-eslint/parser": "2.31.0",
+    "ava": "^3.8.2",
+    "eslint": "^6.0.0",
+    "nyc": "^15.0.1",
+    "typescript": "^3.8.3"
+  },
+  "ava": {
+    "failFast": true,
+    "verbose": true
+  },
+  "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript",
+    "reporter": [
+      "text",
+      "lcov"
+    ]
+  }
+}
