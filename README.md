@@ -2,6 +2,12 @@
 
 Forwarding marker and installer.
 
+## Installation
+
+```
+npm i forwardit
+```
+
 ## Usage
 
 Basic usage in JavaScript:
@@ -25,7 +31,7 @@ const broker = {};
 installForwards(broker, data);
 console.log(broker.value, data.value); // 0, 0
 
-data.inc();
+broker.inc();
 console.log(broker.value, data.value); // 1, 1
 
 data.inc();
