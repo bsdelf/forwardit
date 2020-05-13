@@ -22,8 +22,8 @@ export interface Forward {
 export type ForwardOptions = Omit<Partial<Forward>, 'key'>;
 
 /**
- * Add forward for property
- * @param name New name for the property
+ * Add forward for property.
+ * @param name New name for the property.
  */
 export function forward(name: string): Function;
 export function forward(options: ForwardOptions): Function;

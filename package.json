@@ -1,6 +1,6 @@
 {
   "name": "forwardit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Forwarding marker and installer",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
